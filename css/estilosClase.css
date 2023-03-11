@@ -1,0 +1,143 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #d1d1d1;
+}
+
+.contenedorGrid{
+    width: 100%;
+
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 15% 55% auto;
+/* grid-template-columns: repeat(3, 1fr);*/
+    grid-template-rows:0.5fr auto 1fr;
+    grid-template-areas: "nav header  header"
+                        "nav main    aside"
+                        "nav footer  footer";
+
+}
+/*estilo el header y sus hijos*/
+.header{
+    background-color: #efecaa;
+    grid-area: header;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.contenedorTitulo{
+    
+    padding-right: 50px;
+}
+.nav{
+    background-color: #a8f9a8;
+    grid-area:nav;
+}
+.main{
+    background-color: #ffffff;
+    grid-area:main;
+}
+.contenedorCards{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+.card{
+    width:30%;
+    /*estilados de cards*/
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    border:1px solid #b0b0b0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card img{
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+}
+.aside{
+    background-color: #d7a8f9;
+    grid-area:aside;
+}
+.footer{
+    background-color: #f9a8a8;
+    grid-area:footer;
+}
+.contenedorRedes{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contenedorRedes a{
+    color: #161616;
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+/*pongo medias queries que adapten los componentes y estilados a una version mobile*/
+/*celular : 0 a 600px 768px
+tablet 769px a 1024px
+escritorio notebook 1025px a 1400px
+escritorio pc 1401px */
+/*esta es la media querie para celular en un diseño de desktop first*/
+@media screen and (max-width: 768px){
+    .contenedorGrid{
+       
+        grid-template-columns: 1fr;
+        
+         grid-template-rows:repeat(5,auto);
+         grid-template-areas: "header"
+                               "nav"
+                              "main"
+                              "aside"
+                              "footer";
+        row-gap: 10px;
+       
+    }
+    .contenedorRedes a{
+       
+        font-size: 1.5rem;
+      
+    }
+    .contenedorCards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+/*esta es la media querie para una tablet en un diseño de desktop first
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .contenedorGrid{
+        grid-template-columns: 0.2fr 1fr;
+        grid-template-rows:repeat(4,auto);
+        grid-template-areas: "header header"
+                              "nav main"
+                              "nav aside"
+                              "footer footer";
+        row-gap: 10px;
+    }
+}*/
+
+/*mobile first tablet
+@media screen and (min-width: 768px) and (max-width:1024px){
+
+}*/
+/*mobile first escritorio
+@media screen and (min-width: 1025px){
+    
+}*/

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Labrada:ital,wght@0,200;0,300;1,300&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;1,300&family=Tilt+Neon&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    background-color: #c0c0c0;
+}
+
+.contenedorGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+    height: 100vh;
+    row-gap: 10px;
+}
+.header{
+    background-color: #f5f097;
+   /* display: flex;
+    align-items: center;
+    justify-content: space-between;*/
+}
+/*estilados del navegador del header
+nav{
+    height: 50px;
+    padding: 0 20px;
+    width: 40%;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+nav a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+}*/
+.main{
+    background-color: #97dcf5;
+}
+.footer{
+    background-color: #f7a8f3;
+}
+
+/*version de grilla con aside, donde la cantidad de elementos no coincide con el diseño
+
+.contenedorGrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr) 0.8fr;
+    grid-template-rows: 0.5fr 2.8fr 0.2fr;
+    grid-template-areas: "header header header"
+                         "main   main   aside"
+                         "footer footer footer";
+    height: 100vh;
+    row-gap: 0px;
+}
+.header{
+    background-color: #f5f097;
+    grid-area: header;
+}
+.main{
+    background-color: #97dcf5;
+    grid-area: main;
+}
+.aside{
+    background-color: #f5b397;
+    grid-area: aside;
+}
+.footer{
+    background-color: #f7a8f3;
+    grid-area: footer;
+}
+*/
+/*estilado para main
+h1{
+    text-align: center;
+    font-size: 3rem;
+    margin: 20px 0;
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+.contenedorCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card{
+    width:30%;
+    height: 50vh;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.card img{
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+   
+}
+
+
+.videoAside{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+*/
+
+/*estilados a los iconos de las redes sociales
+
+.redes{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.redes a{
+    text-decoration: none;
+    color: #000;
+    font-size: 2rem;
+    margin: 0 10px;
+}
+*/
